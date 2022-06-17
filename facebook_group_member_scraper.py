@@ -158,7 +158,7 @@ driver.quit()
 
 if not FORM_DATA:
     print("Failed to capture data, try again!")
-
+    sys.exit(1)
 variables = json.loads(FORM_DATA['variables'])
 
 if last_cursor:
