@@ -98,8 +98,8 @@ def facebook_login():
         while not COOKIES.get('presence'):           
             COOKIES = {c['name']:c['value'] for c in driver.get_cookies()}       
     else:
-        driver.find_element(By.ID,"email").send_keys(USER);
-        driver.find_element(By.ID,"pass").send_keys(PASSWORD);
+        driver.find_element(By.ID,"email").send_keys(FACEBOOK_USER);
+        driver.find_element(By.ID,"pass").send_keys(FACEBOOK_PASSWORD);
         driver.find_element(By.ID,"loginbutton").click()
         time.sleep(2)
         COOKIES = {c['name']:c['value'] for c in driver.get_cookies()}
