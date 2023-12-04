@@ -43,15 +43,17 @@ else:
 
 os.chdir(application_path)
 
-group_url = 'https://www.facebook.com/groups/selftaughtprogrammers/members'
+# group_url = 'https://www.facebook.com/groups/selftaughtprogrammers/members'
 
-group_id_name = "selftaughtprogrammers"
+group_url = "https://www.facebook.com/groups/PAPArtstore/members"
 
-FACEBOOK_USERNAME = "bonsignorerxa289335@hotmail.com"
-FACEBOOK_PASSWORD = "X!vJCCDv3F&&1@7r%Hx#"
+group_id_name = "PAPArtstore"
 
-creds = {"username": "bonsignorerxa289335@hotmail.com",
-         "password": "X!vJCCDv3F&&1@7r%Hx#", "authenticator": "BHVBCPANNELTZAKIUUJ7ABLYIJJINZKQ"}
+FACEBOOK_USERNAME = ""
+FACEBOOK_PASSWORD = ""
+
+creds = {"username": "",
+         "password": "", "authenticator": ""}
 
 COOKIES = {}
 FORM_DATA = {}
@@ -159,7 +161,7 @@ def facebook_login():
             COOKIES = {c['name']: c['value'] for c in driver.get_cookies()}
     else:
         COOKIES = {c['name']: c['value'] for c in cookies(driver, credentials=creds)}
-        print(COOKIES)
+        #print(COOKIES)
 
 
 def capturedata(eventdata):

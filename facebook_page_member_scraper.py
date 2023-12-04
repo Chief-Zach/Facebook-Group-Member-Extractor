@@ -68,8 +68,8 @@ group_url = 'https://www.facebook.com/restorationamerica'
 
 group_id_name = group_url.split('/')[-1]
 
-creds = {"username": "t@chatdata.io",
-         "password": "Restoration2024!", "authenticator": "WPPIGRYSFCHFHVBUJ7PTZ3M5CCXW7N46"}
+creds = {"username": "",
+         "password": "", "authenticator": ""}
 
 COOKIES = {}
 FORM_DATA = {}
@@ -227,7 +227,7 @@ def get_group_html(url):
 initialize_chrome()
 
 facebook_login()
-# time.sleep(100000)
+time.sleep(100000)
 html = get_group_html(group_url + "/followers")
 capture = True
 wait = 0
